@@ -1,0 +1,16 @@
+.navbar{
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.nav-menu {
+  background-color:black;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin-top: 0px;
+}

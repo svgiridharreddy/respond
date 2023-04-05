@@ -1,13 +1,373 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  background-color: #fff;
+  /* overflow-x: hidden; */
 }
+/* old form */
+.form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+label {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+legend{
+  font-size: 2.4rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+} 
+
+/* old form end  uncomment below and enable this */ 
+
+
+/* h1, h2 {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+} */
+
+.customer-group-form, .customer-form{
+  position: absolute;
+  margin: 30rem 0 0 5rem;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  width:100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 2rem;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 2rem 2rem 0;
+  border: none;
+  /* border-right: 1px solid #86b7fe; */
+}
+
+
+
+.title {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+}
+
+.form-control{
+  width: 20vw;
+  height: 4vh;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  border: 1px solid #b18bed;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.5rem;
+  transition: border-color 0.15s, box-shadow 0.15s ;
+}
+.form-control:focus {
+  outline: 0;
+  border-color: #b18bed;
+  box-shadow: 0 0 0 2px rgba(24,117,255, 0.25);
+}
+
+input[type="radio"]{
+  display: none;
+}
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  vertical-align: middle;
+  border: 2px solid #5e10b1;
+  border-radius: 50%;
+  padding: 2px;
+  margin:0 5px;
+}
+input[type="radio"]:checked + label span {
+  width: 10px;
+  height: 10px;
+  background: #5e10b1;
+  background-clip: content-box;
+}
+
+.radio{
+  display: flex;
+  flex-direction: row;
+  margin: 3rem 2rem;
+}
+  
+/* .radio {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  padding: 0;
+}
+
+.radio label {
+  display: inline;
+} */
+
+/* .radio .form-control {
+  width: 2rem;
+} */
+
+.btn {
+  width: 10vw;
+  height: 6vh;
+  border: none;
+ 
+}
+.btn-primary {
+  background-color: #5e10b1;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0 40%;
+}
+
+.btn-primary:hover{
+  cursor: pointer;
+  background-color: #42145F;
+}
+
+table, td, th {
+  border: 1px solid #e8daf1;
+  border-left: 0;
+  border-right: 0;
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  font-size: 2rem;
+  
+}
+
+td, th {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+tr a {
+  text-decoration: none;
+}
+
+tr:hover{
+  background-color: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+th {
+  background-color: #42145F;
+  color: white;
+}
+
+
+.customer-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 30vh;
+} 
+
+.customer-product ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  left: 0;
+  padding: 0;
+}
+
+.customer-product li {
+  background: 1px solid #42145F;
+  padding: 1em 2rem;
+}
+
+.customer-product li a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+/* .header-list, .body-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+ .list-item {
+  font-size: 2rem;
+  padding: 0 2rem;
+  justify-content: center;
+  text-align: center;
+} */
+
+/* Nav Bar */
+
+.menu {
+  background: #2a2138;
+  color: #cfc6dc;
+  margin: -2rem;
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 1;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.menu li {
+  padding: 1.5rem;
+}
+
+.menu li:hover, .menu .active {
+  background: #221a2e;
+  color: #fff;
+}
+
+.menu .fas {
+  margin-right: 1rem;
+  width: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 100vw;
+  }
+  .customer-group-form, .customer-form {
+    margin: 10rem 0 0 5rem;
+  }
+
+}
+
+
+/* Sub drop down menu */
+
+.dropdown {
+  /* transform: translate(-50%,-50%); */
+  background: none;
+  width: 20vw;
+  height: 4vh;
+  line-height: 2rem;
+  border: 1px solid blueviolet;
+  border-radius: 1rem;
+}
+
+ .dropdown label {
+  font-size: 1.5rem;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown .button span {
+  float: right;
+  color: black;
+  line-height: 2rem;
+}
+
+.dropdown .button {
+  color: black;
+}
+
+.dropdown .menu-items, .dropdown .sub-menu-items {
+  top: 1rem;
+  position: relative;
+  list-style: none;
+  background: none;
+  border: 1px solid blueviolet;
+  background: blueviolet;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  border-radius: 1rem;
+  display: none;
+  margin-left: -2rem;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.dropdown .menu-items .item {
+  line-height: 4rem;
+  color: black;
+  cursor: pointer;
+  
+}
+
+.dropdown .item , .dropdown .sub-menu-item  {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+.dropdown .item {
+  font-size: 2rem;
+}
+.dropdown .sub-menu-item {
+  font-size: 1.5rem;
+}
+
+.dropdown .item a:hover,.dropdown .item label:hover {
+  color: #ccc;
+}
+
+.dropdown .sub-menu-items  {
+  position: static;
+  line-height: 3rem;
+  /* padding-left: 3rem; */
+  border: none;
+}
+
+.dropdown .sub-menu-item   {
+  line-height: 3rem;
+  border: none;
+  
+}
+
+.dropdown .item span {
+  line-height: 3rem;
+  float:right;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
+.dropdown .checkbox {
+  display: none;
+}
+
+[id^=btn]:checked + ul {
+  display: block;
+}
+
+
+/* .menu-items .hide {
+  display: none;
+} */
